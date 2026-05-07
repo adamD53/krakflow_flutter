@@ -1,36 +1,36 @@
 class Task {
-  final String title;
-  final String deadline;
-  final bool done;
-  final String priority;
+  String title;
+  String deadline;
+  bool done;
+  String priority;
 
-  const Task({
+  Task({
     required this.title,
     required this.deadline,
-    required this.done,
+    this.done = false,
     required this.priority,
   });
 }
 
 class TaskRepository {
   static List<Task> tasks = [
-    const Task(
-      title: 'Projekt Flutter',
-      deadline: 'jutro',
+    Task(
+      title: "Projekt Flutter",
+      deadline: "jutro",
       done: false,
-      priority: 'wysoki',
+      priority: "wysoki",
     ),
-    const Task(
-      title: 'Oddac raport',
-      deadline: 'dzisiaj',
+    Task(
+      title: "Oddać raport",
+      deadline: "dzisiaj",
       done: true,
-      priority: 'wysoki',
+      priority: "wysoki",
     ),
-    const Task(
-      title: 'Powtorzyc widgety',
-      deadline: 'w piatek',
+    Task(
+      title: "Powtórzyć widgety",
+      deadline: "w piątek",
       done: false,
-      priority: 'sredni',
+      priority: "średni",
     ),
   ];
 }
